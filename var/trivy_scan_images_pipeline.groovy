@@ -22,16 +22,10 @@ pipeline {
                         echo "Trivy scan succeeded for $dockerImage"
                     } else {
                         error "Trivy scan failed for $dockerImage"
-                    }
-                }
-            }
-        }
-    }
-
-    post {
-        always {
-            // You can perform post-build actions here
-        }
-    }
-}
+                    }//end of ifelse
+                }//end of script
+            }//end of steps
+        }//end of stage
+    }//end of stages
+}//end of pipeline
 
